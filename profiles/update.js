@@ -16,22 +16,20 @@ module.exports.update = (event, context, callback) => {
     return;
   }
 
-  const params = {
-    TableName: process.env.DYNAMODB_TABLE,
-    Key: {
-      id: event.pathParameters.id,
-    },
-    ExpressionAttributeNames: {
-      '#todo_text': 'text',
-    },
-    ExpressionAttributeValues: {
-      ':text': data.text,
-      ':checked': data.checked,
-      ':updatedAt': timestamp,
-    },
-    UpdateExpression: 'SET #todo_text = :text, checked = :checked, updatedAt = :updatedAt',
-    ReturnValues: 'ALL_NEW',
-  };
+  var table = event.pathParameters.table;
+  var allowedTables = utils.allowedTables;
+
+  //debug table logs
+  console.log(table);
+  console.log(allowedTables[table]);
+
+  if(!(table in allowedTables)){
+    console.error("Table doesn't exist.");
+    callback(new Error("Table doesn't exist."));
+    return;
+  }
+
+  const params = utils.updateParams(table, data);
 
   // update the todo in the database
   dynamoDb.update(params, (error, result) => {

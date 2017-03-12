@@ -37,6 +37,13 @@ provider:
         - dynamodb:DeleteItem
       Resource: "arn:aws:dynamodb:${opt:region, self:provider.region}:*:*"
 functions:
+  usersList: # Function name
+    handler: users/handler.list # Reference to file handler.js & exported function 'users'
+    events: # All events associated with this function
+      - http:
+          path: /api/users
+          method: get
+          cors: true
   userGet:
     handler: users/handler.get # Reference to file handler.js & exported function 'users'
     events: # All events associated with this function

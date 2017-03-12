@@ -23,9 +23,9 @@ provider:
   runtime: nodejs4.3
   region: us-west-2
   environment:
-    USER_TABLE: "USER"-${opt:stage, self:provider.stage}
-    PROVIDER_TABLE: "PROVIDER"-${opt:stage, self:provider.stage}
-    CHILDREN_TABLE: "CHILDREN"-${opt:stage, self:provider.stage}
+    USER_TABLE: USER-${opt:stage, self:provider.stage}
+    PROVIDER_TABLE: PROVIDER-${opt:stage, self:provider.stage}
+    CHILDREN_TABLE: CHILDREN-${opt:stage, self:provider.stage}
   iamRoleStatements:
     - Effect: Allow
       Action:
@@ -36,39 +36,88 @@ provider:
         - dynamodb:UpdateItem
         - dynamodb:DeleteItem
       Resource: "arn:aws:dynamodb:${opt:region, self:provider.region}:*:*"
-
-  provider: # Function name
-    handler: profiles/list.list # Reference to file handler.js & exported function 'users'
+functions:
+  userGet:
+    handler: users/handler.get # Reference to file handler.js & exported function 'users'
     events: # All events associated with this function
       - http:
-          path: {table}
+          path: api/user/{id}
           method: get
           cors: true
-    handler: profiles/get.get # Reference to file handler.js & exported function 'users'
+  userCreate:
+    handler: users/handler.create # Reference to file handler.js & exported function 'users'
     events: # All events associated with this function
       - http:
-          path: {table}/{id}
-          method: get
-          cors: true
-    handler: profiles/create.create # Reference to file handler.js & exported function 'users'
-    events: # All events associated with this function
-      - http:
-          path: {table}/create
+          path: api/user/create
           method: post
           cors: true
-    handler: profiles/update.update # Reference to file handler.js & exported function 'users'
+  userDelete:
+    handler: users/handler.delete # Reference to file handler.js & exported function 'users'
     events: # All events associated with this function
       - http:
-          path: {table}/{id}
-          method: put
-          cors: true
-    handler: profiles/delete.delete # Reference to file handler.js & exported function 'users'
-    events: # All events associated with this function
-      - http:
-          path: {table}/{id}
+          path: api/user/{id}
           method: delete
           cors: true
 
+#--------------------- Providers -------------------------
+  providersList: # Function name
+    handler: providers/handler.list # Reference to file handler.js & exported function 'users'
+    events: # All events associated with this function
+      - http:
+          path: /api/providers
+          method: get
+          cors: true
+  providerGet:
+    handler: providers/handler.get # Reference to file handler.js & exported function 'users'
+    events: # All events associated with this function
+      - http:
+          path: api/providers/{id}
+          method: get
+          cors: true
+  providerCreate:
+    handler: providers/handler.create # Reference to file handler.js & exported function 'users'
+    events: # All events associated with this function
+      - http:
+          path: api/providers/create
+          method: post
+          cors: true
+  providerDelete:
+    handler: providers/handler.delete # Reference to file handler.js & exported function 'users'
+    events: # All events associated with this function
+      - http:
+          path: api/providers/{id}
+          method: delete
+          cors: true
+
+#--------------------- Children -------------------------
+  childrenList: # Function name
+    handler: children/handler.list # Reference to file handler.js & exported function 'users'
+    events: # All events associated with this function
+      - http:
+          path: /api/children
+          method: get
+          cors: true
+  childGet:
+    handler: children/handler.get # Reference to file handler.js & exported function 'users'
+    events: # All events associated with this function
+      - http:
+          path: api/child/{id}
+          method: get
+          cors: true
+  childCreate:
+    handler: children/handler.create # Reference to file handler.js & exported function 'users'
+    events: # All events associated with this function
+      - http:
+          path: api/child/create
+          method: post
+          cors: true
+  childDelete:
+    handler: children/handler.delete # Reference to file handler.js & exported function 'users'
+    events: # All events associated with this function
+      - http:
+          path: api/child/{id}
+          method: delete
+          cors: true
 
 resources:
   Resources:
@@ -77,12 +126,10 @@ resources:
       DeletionPolicy: Retain
       Properties:
         AttributeDefinitions:
-          -
-            AttributeName: id
+          - AttributeName: id
             AttributeType: S
         KeySchema:
-          -
-            AttributeName: id
+          - AttributeName: id
             KeyType: HASH
         ProvisionedThroughput:
           ReadCapacityUnits: 1
@@ -93,12 +140,10 @@ resources:
       DeletionPolicy: Retain
       Properties:
         AttributeDefinitions:
-          -
-            AttributeName: id
+          - AttributeName: id
             AttributeType: S
         KeySchema:
-          -
-            AttributeName: id
+          - AttributeName: id
             KeyType: HASH
         ProvisionedThroughput:
           ReadCapacityUnits: 1
@@ -109,12 +154,10 @@ resources:
       DeletionPolicy: Retain
       Properties:
         AttributeDefinitions:
-          -
-            AttributeName: id
+          - AttributeName: id
             AttributeType: S
         KeySchema:
-          -
-            AttributeName: id
+          - AttributeName: id
             KeyType: HASH
         ProvisionedThroughput:
           ReadCapacityUnits: 1

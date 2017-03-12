@@ -94,7 +94,7 @@ functions:
     handler: children/handler.list # Reference to file handler.js & exported function 'users'
     events: # All events associated with this function
       - http:
-          path: /api/children
+          path: /api/children/{id}
           method: get
           cors: true
   childGet:

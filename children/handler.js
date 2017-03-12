@@ -13,7 +13,7 @@ module.exports.get = (event, context, callback) => {
 }
 module.exports.list = (event, context, callback) => {
   var userId = event.pathParameters.id;
-  list.list(table, userId, callback);
+  list.list(table, callback, userId);
 }
 module.exports.create = (event, context, callback) => {
   const data = JSON.parse(event.body);

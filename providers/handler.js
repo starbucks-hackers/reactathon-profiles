@@ -15,6 +15,7 @@ module.exports.list = (event, context, callback) => {
   list.list(table,callback);
 }
 module.exports.create = (event, context, callback) => {
+  console.log(event);
   const data = JSON.parse(event.body);
   if (typeof data.text !== 'string') {
     console.error('Validation Failed');

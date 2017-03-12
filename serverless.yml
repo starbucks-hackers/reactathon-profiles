@@ -127,7 +127,7 @@ resources:
       Properties:
         AttributeDefinitions:
           - AttributeName: id
-            AttributeType: N
+            AttributeType: S
         KeySchema:
           - AttributeName: id
             KeyType: HASH
@@ -141,7 +141,7 @@ resources:
       Properties:
         AttributeDefinitions:
           - AttributeName: id
-            AttributeType: N
+            AttributeType: S
         KeySchema:
           - AttributeName: id
             KeyType: HASH
@@ -155,7 +155,7 @@ resources:
       Properties:
         AttributeDefinitions:
           - AttributeName: id
-            AttributeType: N
+            AttributeType: S
         KeySchema:
           - AttributeName: id
             KeyType: HASH

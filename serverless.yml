@@ -1,22 +1,6 @@
-# Welcome to Serverless!
-#
-# This file is the main config file for your service.
-# It's very minimal at this point and uses default values.
-# You can always add more config options for more control.
-# We've included some commented out config examples here.
-# Just uncomment any of them to get that config option.
-#
-# For full config options, check the docs:
-#    docs.serverless.com
-#
-# Happy Coding!
 
 service: profiles
 
-
-# You can pin your service to only deploy with a specific Serverless version
-# Check out our docs for more details
-# frameworkVersion: "=X.X.X"
 
 provider:
   name: aws
@@ -25,7 +9,7 @@ provider:
   environment:
     USER_TABLE: USER-${opt:stage, self:provider.stage}
     PROVIDER_TABLE: PROVIDER-${opt:stage, self:provider.stage}
-    CHILDREN_TABLE: CHILDREN-${opt:stage, self:provider.stage}
+    CHILDREN_TABLE: CHILDREN3-${opt:stage, self:provider.stage}
   iamRoleStatements:
     - Effect: Allow
       Action:
@@ -36,7 +20,11 @@ provider:
         - dynamodb:UpdateItem
         - dynamodb:DeleteItem
       Resource: "arn:aws:dynamodb:${opt:region, self:provider.region}:*:*"
+
+
 functions:
+
+#----------------- Users -----------------------
   usersList: # Function name
     handler: users/handler.list # Reference to file handler.js & exported function 'users'
     events: # All events associated with this function
@@ -161,10 +149,10 @@ resources:
       DeletionPolicy: Retain
       Properties:
         AttributeDefinitions:
-          - AttributeName: id
+          - AttributeName: userId
             AttributeType: S
         KeySchema:
-          - AttributeName: id
+          - AttributeName: userId
             KeyType: HASH
         ProvisionedThroughput:
           ReadCapacityUnits: 1

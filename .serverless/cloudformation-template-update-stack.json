@@ -404,7 +404,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/profiles/dev/1489346953357-2017-03-12T19:29:13.357Z/profiles.zip"
+          "S3Key": "serverless/profiles/dev/1489355524649-2017-03-12T21:52:04.649Z/profiles.zip"
         },
         "FunctionName": "profiles-dev-usersList",
         "Handler": "users/handler.list",
@@ -421,7 +421,7 @@
           "Variables": {
             "USER_TABLE": "USER-dev",
             "PROVIDER_TABLE": "PROVIDER-dev",
-            "CHILDREN_TABLE": "CHILDREN-dev"
+            "CHILDREN_TABLE": "CHILDREN3-dev"
           }
         }
       },
@@ -429,14 +429,14 @@
         "IamRoleLambdaExecution"
       ]
     },
-    "UsersListLambdaVersion6WYkTi87WOHx8ovDaG6xQGl15sEFxq6VpeJeXZnnrw": {
+    "UsersListLambdaVersion06YeG9bZhD71JqlUgVR2CAqpVhFwqFXhN4BBie8Y": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "UsersListLambdaFunction"
         },
-        "CodeSha256": "6WYkTi87WOHx8/ovDaG6xQGl15sEFxq6VpeJeXZnnrw="
+        "CodeSha256": "+06YeG9bZhD71J+qlUgVR2CAqpVh/FwqFXhN4BBie8Y="
       }
     },
     "UserGetLambdaFunction": {
@@ -446,7 +446,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/profiles/dev/1489346953357-2017-03-12T19:29:13.357Z/profiles.zip"
+          "S3Key": "serverless/profiles/dev/1489355524649-2017-03-12T21:52:04.649Z/profiles.zip"
         },
         "FunctionName": "profiles-dev-userGet",
         "Handler": "users/handler.get",
@@ -463,7 +463,7 @@
           "Variables": {
             "USER_TABLE": "USER-dev",
             "PROVIDER_TABLE": "PROVIDER-dev",
-            "CHILDREN_TABLE": "CHILDREN-dev"
+            "CHILDREN_TABLE": "CHILDREN3-dev"
           }
         }
       },
@@ -471,14 +471,14 @@
         "IamRoleLambdaExecution"
       ]
     },
-    "UserGetLambdaVersion6WYkTi87WOHx8ovDaG6xQGl15sEFxq6VpeJeXZnnrw": {
+    "UserGetLambdaVersion06YeG9bZhD71JqlUgVR2CAqpVhFwqFXhN4BBie8Y": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "UserGetLambdaFunction"
         },
-        "CodeSha256": "6WYkTi87WOHx8/ovDaG6xQGl15sEFxq6VpeJeXZnnrw="
+        "CodeSha256": "+06YeG9bZhD71J+qlUgVR2CAqpVh/FwqFXhN4BBie8Y="
       }
     },
     "UserCreateLambdaFunction": {
@@ -488,7 +488,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/profiles/dev/1489346953357-2017-03-12T19:29:13.357Z/profiles.zip"
+          "S3Key": "serverless/profiles/dev/1489355524649-2017-03-12T21:52:04.649Z/profiles.zip"
         },
         "FunctionName": "profiles-dev-userCreate",
         "Handler": "users/handler.create",
@@ -505,7 +505,7 @@
           "Variables": {
             "USER_TABLE": "USER-dev",
             "PROVIDER_TABLE": "PROVIDER-dev",
-            "CHILDREN_TABLE": "CHILDREN-dev"
+            "CHILDREN_TABLE": "CHILDREN3-dev"
           }
         }
       },
@@ -513,14 +513,14 @@
         "IamRoleLambdaExecution"
       ]
     },
-    "UserCreateLambdaVersion6WYkTi87WOHx8ovDaG6xQGl15sEFxq6VpeJeXZnnrw": {
+    "UserCreateLambdaVersion06YeG9bZhD71JqlUgVR2CAqpVhFwqFXhN4BBie8Y": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "UserCreateLambdaFunction"
         },
-        "CodeSha256": "6WYkTi87WOHx8/ovDaG6xQGl15sEFxq6VpeJeXZnnrw="
+        "CodeSha256": "+06YeG9bZhD71J+qlUgVR2CAqpVh/FwqFXhN4BBie8Y="
       }
     },
     "UserDeleteLambdaFunction": {
@@ -530,7 +530,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/profiles/dev/1489346953357-2017-03-12T19:29:13.357Z/profiles.zip"
+          "S3Key": "serverless/profiles/dev/1489355524649-2017-03-12T21:52:04.649Z/profiles.zip"
         },
         "FunctionName": "profiles-dev-userDelete",
         "Handler": "users/handler.delete",
@@ -547,7 +547,7 @@
           "Variables": {
             "USER_TABLE": "USER-dev",
             "PROVIDER_TABLE": "PROVIDER-dev",
-            "CHILDREN_TABLE": "CHILDREN-dev"
+            "CHILDREN_TABLE": "CHILDREN3-dev"
           }
         }
       },
@@ -555,14 +555,14 @@
         "IamRoleLambdaExecution"
       ]
     },
-    "UserDeleteLambdaVersion6WYkTi87WOHx8ovDaG6xQGl15sEFxq6VpeJeXZnnrw": {
+    "UserDeleteLambdaVersion06YeG9bZhD71JqlUgVR2CAqpVhFwqFXhN4BBie8Y": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "UserDeleteLambdaFunction"
         },
-        "CodeSha256": "6WYkTi87WOHx8/ovDaG6xQGl15sEFxq6VpeJeXZnnrw="
+        "CodeSha256": "+06YeG9bZhD71J+qlUgVR2CAqpVh/FwqFXhN4BBie8Y="
       }
     },
     "ProvidersListLambdaFunction": {
@@ -572,7 +572,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/profiles/dev/1489346953357-2017-03-12T19:29:13.357Z/profiles.zip"
+          "S3Key": "serverless/profiles/dev/1489355524649-2017-03-12T21:52:04.649Z/profiles.zip"
         },
         "FunctionName": "profiles-dev-providersList",
         "Handler": "providers/handler.list",
@@ -589,7 +589,7 @@
           "Variables": {
             "USER_TABLE": "USER-dev",
             "PROVIDER_TABLE": "PROVIDER-dev",
-            "CHILDREN_TABLE": "CHILDREN-dev"
+            "CHILDREN_TABLE": "CHILDREN3-dev"
           }
         }
       },
@@ -597,14 +597,14 @@
         "IamRoleLambdaExecution"
       ]
     },
-    "ProvidersListLambdaVersion6WYkTi87WOHx8ovDaG6xQGl15sEFxq6VpeJeXZnnrw": {
+    "ProvidersListLambdaVersion06YeG9bZhD71JqlUgVR2CAqpVhFwqFXhN4BBie8Y": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "ProvidersListLambdaFunction"
         },
-        "CodeSha256": "6WYkTi87WOHx8/ovDaG6xQGl15sEFxq6VpeJeXZnnrw="
+        "CodeSha256": "+06YeG9bZhD71J+qlUgVR2CAqpVh/FwqFXhN4BBie8Y="
       }
     },
     "ProviderGetLambdaFunction": {
@@ -614,7 +614,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/profiles/dev/1489346953357-2017-03-12T19:29:13.357Z/profiles.zip"
+          "S3Key": "serverless/profiles/dev/1489355524649-2017-03-12T21:52:04.649Z/profiles.zip"
         },
         "FunctionName": "profiles-dev-providerGet",
         "Handler": "providers/handler.get",
@@ -631,7 +631,7 @@
           "Variables": {
             "USER_TABLE": "USER-dev",
             "PROVIDER_TABLE": "PROVIDER-dev",
-            "CHILDREN_TABLE": "CHILDREN-dev"
+            "CHILDREN_TABLE": "CHILDREN3-dev"
           }
         }
       },
@@ -639,14 +639,14 @@
         "IamRoleLambdaExecution"
       ]
     },
-    "ProviderGetLambdaVersion6WYkTi87WOHx8ovDaG6xQGl15sEFxq6VpeJeXZnnrw": {
+    "ProviderGetLambdaVersion06YeG9bZhD71JqlUgVR2CAqpVhFwqFXhN4BBie8Y": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "ProviderGetLambdaFunction"
         },
-        "CodeSha256": "6WYkTi87WOHx8/ovDaG6xQGl15sEFxq6VpeJeXZnnrw="
+        "CodeSha256": "+06YeG9bZhD71J+qlUgVR2CAqpVh/FwqFXhN4BBie8Y="
       }
     },
     "ProviderCreateLambdaFunction": {
@@ -656,7 +656,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/profiles/dev/1489346953357-2017-03-12T19:29:13.357Z/profiles.zip"
+          "S3Key": "serverless/profiles/dev/1489355524649-2017-03-12T21:52:04.649Z/profiles.zip"
         },
         "FunctionName": "profiles-dev-providerCreate",
         "Handler": "providers/handler.create",
@@ -673,7 +673,7 @@
           "Variables": {
             "USER_TABLE": "USER-dev",
             "PROVIDER_TABLE": "PROVIDER-dev",
-            "CHILDREN_TABLE": "CHILDREN-dev"
+            "CHILDREN_TABLE": "CHILDREN3-dev"
           }
         }
       },
@@ -681,14 +681,14 @@
         "IamRoleLambdaExecution"
       ]
     },
-    "ProviderCreateLambdaVersion6WYkTi87WOHx8ovDaG6xQGl15sEFxq6VpeJeXZnnrw": {
+    "ProviderCreateLambdaVersion06YeG9bZhD71JqlUgVR2CAqpVhFwqFXhN4BBie8Y": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "ProviderCreateLambdaFunction"
         },
-        "CodeSha256": "6WYkTi87WOHx8/ovDaG6xQGl15sEFxq6VpeJeXZnnrw="
+        "CodeSha256": "+06YeG9bZhD71J+qlUgVR2CAqpVh/FwqFXhN4BBie8Y="
       }
     },
     "ProviderDeleteLambdaFunction": {
@@ -698,7 +698,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/profiles/dev/1489346953357-2017-03-12T19:29:13.357Z/profiles.zip"
+          "S3Key": "serverless/profiles/dev/1489355524649-2017-03-12T21:52:04.649Z/profiles.zip"
         },
         "FunctionName": "profiles-dev-providerDelete",
         "Handler": "providers/handler.delete",
@@ -715,7 +715,7 @@
           "Variables": {
             "USER_TABLE": "USER-dev",
             "PROVIDER_TABLE": "PROVIDER-dev",
-            "CHILDREN_TABLE": "CHILDREN-dev"
+            "CHILDREN_TABLE": "CHILDREN3-dev"
           }
         }
       },
@@ -723,14 +723,14 @@
         "IamRoleLambdaExecution"
       ]
     },
-    "ProviderDeleteLambdaVersion6WYkTi87WOHx8ovDaG6xQGl15sEFxq6VpeJeXZnnrw": {
+    "ProviderDeleteLambdaVersion06YeG9bZhD71JqlUgVR2CAqpVhFwqFXhN4BBie8Y": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "ProviderDeleteLambdaFunction"
         },
-        "CodeSha256": "6WYkTi87WOHx8/ovDaG6xQGl15sEFxq6VpeJeXZnnrw="
+        "CodeSha256": "+06YeG9bZhD71J+qlUgVR2CAqpVh/FwqFXhN4BBie8Y="
       }
     },
     "ChildrenListLambdaFunction": {
@@ -740,7 +740,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/profiles/dev/1489346953357-2017-03-12T19:29:13.357Z/profiles.zip"
+          "S3Key": "serverless/profiles/dev/1489355524649-2017-03-12T21:52:04.649Z/profiles.zip"
         },
         "FunctionName": "profiles-dev-childrenList",
         "Handler": "children/handler.list",
@@ -757,7 +757,7 @@
           "Variables": {
             "USER_TABLE": "USER-dev",
             "PROVIDER_TABLE": "PROVIDER-dev",
-            "CHILDREN_TABLE": "CHILDREN-dev"
+            "CHILDREN_TABLE": "CHILDREN3-dev"
           }
         }
       },
@@ -765,14 +765,14 @@
         "IamRoleLambdaExecution"
       ]
     },
-    "ChildrenListLambdaVersion6WYkTi87WOHx8ovDaG6xQGl15sEFxq6VpeJeXZnnrw": {
+    "ChildrenListLambdaVersion06YeG9bZhD71JqlUgVR2CAqpVhFwqFXhN4BBie8Y": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "ChildrenListLambdaFunction"
         },
-        "CodeSha256": "6WYkTi87WOHx8/ovDaG6xQGl15sEFxq6VpeJeXZnnrw="
+        "CodeSha256": "+06YeG9bZhD71J+qlUgVR2CAqpVh/FwqFXhN4BBie8Y="
       }
     },
     "ChildGetLambdaFunction": {
@@ -782,7 +782,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/profiles/dev/1489346953357-2017-03-12T19:29:13.357Z/profiles.zip"
+          "S3Key": "serverless/profiles/dev/1489355524649-2017-03-12T21:52:04.649Z/profiles.zip"
         },
         "FunctionName": "profiles-dev-childGet",
         "Handler": "children/handler.get",
@@ -799,7 +799,7 @@
           "Variables": {
             "USER_TABLE": "USER-dev",
             "PROVIDER_TABLE": "PROVIDER-dev",
-            "CHILDREN_TABLE": "CHILDREN-dev"
+            "CHILDREN_TABLE": "CHILDREN3-dev"
           }
         }
       },
@@ -807,14 +807,14 @@
         "IamRoleLambdaExecution"
       ]
     },
-    "ChildGetLambdaVersion6WYkTi87WOHx8ovDaG6xQGl15sEFxq6VpeJeXZnnrw": {
+    "ChildGetLambdaVersion06YeG9bZhD71JqlUgVR2CAqpVhFwqFXhN4BBie8Y": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "ChildGetLambdaFunction"
         },
-        "CodeSha256": "6WYkTi87WOHx8/ovDaG6xQGl15sEFxq6VpeJeXZnnrw="
+        "CodeSha256": "+06YeG9bZhD71J+qlUgVR2CAqpVh/FwqFXhN4BBie8Y="
       }
     },
     "ChildCreateLambdaFunction": {
@@ -824,7 +824,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/profiles/dev/1489346953357-2017-03-12T19:29:13.357Z/profiles.zip"
+          "S3Key": "serverless/profiles/dev/1489355524649-2017-03-12T21:52:04.649Z/profiles.zip"
         },
         "FunctionName": "profiles-dev-childCreate",
         "Handler": "children/handler.create",
@@ -841,7 +841,7 @@
           "Variables": {
             "USER_TABLE": "USER-dev",
             "PROVIDER_TABLE": "PROVIDER-dev",
-            "CHILDREN_TABLE": "CHILDREN-dev"
+            "CHILDREN_TABLE": "CHILDREN3-dev"
           }
         }
       },
@@ -849,14 +849,14 @@
         "IamRoleLambdaExecution"
       ]
     },
-    "ChildCreateLambdaVersion6WYkTi87WOHx8ovDaG6xQGl15sEFxq6VpeJeXZnnrw": {
+    "ChildCreateLambdaVersion06YeG9bZhD71JqlUgVR2CAqpVhFwqFXhN4BBie8Y": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "ChildCreateLambdaFunction"
         },
-        "CodeSha256": "6WYkTi87WOHx8/ovDaG6xQGl15sEFxq6VpeJeXZnnrw="
+        "CodeSha256": "+06YeG9bZhD71J+qlUgVR2CAqpVh/FwqFXhN4BBie8Y="
       }
     },
     "ChildDeleteLambdaFunction": {
@@ -866,7 +866,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/profiles/dev/1489346953357-2017-03-12T19:29:13.357Z/profiles.zip"
+          "S3Key": "serverless/profiles/dev/1489355524649-2017-03-12T21:52:04.649Z/profiles.zip"
         },
         "FunctionName": "profiles-dev-childDelete",
         "Handler": "children/handler.delete",
@@ -883,7 +883,7 @@
           "Variables": {
             "USER_TABLE": "USER-dev",
             "PROVIDER_TABLE": "PROVIDER-dev",
-            "CHILDREN_TABLE": "CHILDREN-dev"
+            "CHILDREN_TABLE": "CHILDREN3-dev"
           }
         }
       },
@@ -891,14 +891,14 @@
         "IamRoleLambdaExecution"
       ]
     },
-    "ChildDeleteLambdaVersion6WYkTi87WOHx8ovDaG6xQGl15sEFxq6VpeJeXZnnrw": {
+    "ChildDeleteLambdaVersion06YeG9bZhD71JqlUgVR2CAqpVhFwqFXhN4BBie8Y": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "ChildDeleteLambdaFunction"
         },
-        "CodeSha256": "6WYkTi87WOHx8/ovDaG6xQGl15sEFxq6VpeJeXZnnrw="
+        "CodeSha256": "+06YeG9bZhD71J+qlUgVR2CAqpVh/FwqFXhN4BBie8Y="
       }
     },
     "ApiGatewayRestApi": {
@@ -1936,7 +1936,7 @@
         "MethodResponses": []
       }
     },
-    "ApiGatewayDeployment1489346953585": {
+    "ApiGatewayDeployment1489355524905": {
       "Type": "AWS::ApiGateway::Deployment",
       "Properties": {
         "RestApiId": {
@@ -2407,13 +2407,13 @@
       "Properties": {
         "AttributeDefinitions": [
           {
-            "AttributeName": "id",
+            "AttributeName": "userId",
             "AttributeType": "S"
           }
         ],
         "KeySchema": [
           {
-            "AttributeName": "id",
+            "AttributeName": "userId",
             "KeyType": "HASH"
           }
         ],
@@ -2421,7 +2421,7 @@
           "ReadCapacityUnits": 1,
           "WriteCapacityUnits": 1
         },
-        "TableName": "CHILDREN-dev"
+        "TableName": "CHILDREN3-dev"
       }
     }
   },
@@ -2434,73 +2434,73 @@
     "UsersListLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "UsersListLambdaVersion6WYkTi87WOHx8ovDaG6xQGl15sEFxq6VpeJeXZnnrw"
+        "Ref": "UsersListLambdaVersion06YeG9bZhD71JqlUgVR2CAqpVhFwqFXhN4BBie8Y"
       }
     },
     "UserGetLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "UserGetLambdaVersion6WYkTi87WOHx8ovDaG6xQGl15sEFxq6VpeJeXZnnrw"
+        "Ref": "UserGetLambdaVersion06YeG9bZhD71JqlUgVR2CAqpVhFwqFXhN4BBie8Y"
       }
     },
     "UserCreateLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "UserCreateLambdaVersion6WYkTi87WOHx8ovDaG6xQGl15sEFxq6VpeJeXZnnrw"
+        "Ref": "UserCreateLambdaVersion06YeG9bZhD71JqlUgVR2CAqpVhFwqFXhN4BBie8Y"
       }
     },
     "UserDeleteLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "UserDeleteLambdaVersion6WYkTi87WOHx8ovDaG6xQGl15sEFxq6VpeJeXZnnrw"
+        "Ref": "UserDeleteLambdaVersion06YeG9bZhD71JqlUgVR2CAqpVhFwqFXhN4BBie8Y"
       }
     },
     "ProvidersListLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "ProvidersListLambdaVersion6WYkTi87WOHx8ovDaG6xQGl15sEFxq6VpeJeXZnnrw"
+        "Ref": "ProvidersListLambdaVersion06YeG9bZhD71JqlUgVR2CAqpVhFwqFXhN4BBie8Y"
       }
     },
     "ProviderGetLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "ProviderGetLambdaVersion6WYkTi87WOHx8ovDaG6xQGl15sEFxq6VpeJeXZnnrw"
+        "Ref": "ProviderGetLambdaVersion06YeG9bZhD71JqlUgVR2CAqpVhFwqFXhN4BBie8Y"
       }
     },
     "ProviderCreateLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "ProviderCreateLambdaVersion6WYkTi87WOHx8ovDaG6xQGl15sEFxq6VpeJeXZnnrw"
+        "Ref": "ProviderCreateLambdaVersion06YeG9bZhD71JqlUgVR2CAqpVhFwqFXhN4BBie8Y"
       }
     },
     "ProviderDeleteLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "ProviderDeleteLambdaVersion6WYkTi87WOHx8ovDaG6xQGl15sEFxq6VpeJeXZnnrw"
+        "Ref": "ProviderDeleteLambdaVersion06YeG9bZhD71JqlUgVR2CAqpVhFwqFXhN4BBie8Y"
       }
     },
     "ChildrenListLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "ChildrenListLambdaVersion6WYkTi87WOHx8ovDaG6xQGl15sEFxq6VpeJeXZnnrw"
+        "Ref": "ChildrenListLambdaVersion06YeG9bZhD71JqlUgVR2CAqpVhFwqFXhN4BBie8Y"
       }
     },
     "ChildGetLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "ChildGetLambdaVersion6WYkTi87WOHx8ovDaG6xQGl15sEFxq6VpeJeXZnnrw"
+        "Ref": "ChildGetLambdaVersion06YeG9bZhD71JqlUgVR2CAqpVhFwqFXhN4BBie8Y"
       }
     },
     "ChildCreateLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "ChildCreateLambdaVersion6WYkTi87WOHx8ovDaG6xQGl15sEFxq6VpeJeXZnnrw"
+        "Ref": "ChildCreateLambdaVersion06YeG9bZhD71JqlUgVR2CAqpVhFwqFXhN4BBie8Y"
       }
     },
     "ChildDeleteLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "ChildDeleteLambdaVersion6WYkTi87WOHx8ovDaG6xQGl15sEFxq6VpeJeXZnnrw"
+        "Ref": "ChildDeleteLambdaVersion06YeG9bZhD71JqlUgVR2CAqpVhFwqFXhN4BBie8Y"
       }
     },
     "ServiceEndpoint": {
